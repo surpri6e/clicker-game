@@ -10,3 +10,17 @@
 „тобы убрать консоль:
  1. точка входа - *main*
  2. подсистема - *windows*
+
+„тобы был только **.exe** файл можно сделать *Release* версию и поместить в SFX архив.
+
+```c++
+	chat::Registration^ registration = gcnew chat::Registration();
+	registration->Dock = DockStyle::Fill;
+	panelContainer->Controls->Clear();
+	panelContainer->Controls->Add(registration);
+	registration->BringToFront();
+```
+
+```panelContainer``` - контейнер в главной форме.
+
+Ёто из другого проекта, но вот так можно делать разные окна дл€ форм в разных файлах!
